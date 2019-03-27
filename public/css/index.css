@@ -165,10 +165,10 @@
 }
 
 .grid .grid-item, .grid .placeholder {
-    height: 230px;
-    width: 400px;
+    height: 240px;
+    width: 450px;
     flex-grow: 0;
-    margin: 10px;
+    margin: 10px 15px;
 }
 
 .grid .placeholder {
