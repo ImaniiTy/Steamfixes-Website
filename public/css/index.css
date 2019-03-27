@@ -29,6 +29,7 @@
     top: 0;
     padding-top: 20px;
     text-align: center;
+    z-index: 10;
 }
 
 .rounded {
@@ -131,9 +132,9 @@
  * 
  */
 .to_top {
-    z-index: 9999999;
+    z-index: 10;
     cursor: pointer;
-    color: #fff;
+    color: whitesmoke;
     text-align: center;
     width: 30px;
     background: #48515c;
@@ -158,16 +159,15 @@
 .grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     max-height: 100%;
-    margin: 50px 20px;
-    padding: 0 6%;
+    margin: 50px auto;
 }
 
 .grid .grid-item, .grid .placeholder {
     height: 230px;
-    max-width: 450px;
-    min-width: 350px;
-    flex: 1 1 351px;
+    width: 400px;
+    flex-grow: 0;
     margin: 10px;
 }
 
