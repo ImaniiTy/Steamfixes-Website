@@ -1,9 +1,11 @@
 html {
     min-height: 100%;
+    font-family: sans-serif;
 }
 
 body {
     min-height: 100%;
+    color: whitesmoke;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     background-attachment: fixed;
 }
