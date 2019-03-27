@@ -1,0 +1,100 @@
+html {
+    height: 100%;
+    
+}
+
+body {
+    height: 100%;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background-attachment: fixed;
+}
+
+#stars {
+    background: url("../img/stars.png") repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    animation: starsanim 200s linear infinite;
+    z-index: -1;
+}
+
+#stars2 {
+    background: url("../img/stars2.png") repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    animation: starsanim 250s linear infinite;
+    z-index: -1;
+}
+
+#stars3 {
+    background: url("../img/stars3.png") repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    animation: starsanim 300s linear infinite;
+    z-index: -1;
+}
+
+#title {
+    position: relative;
+    top : 5%;
+    left: 0;
+    right: 0;
+    margin-bottom: 30px;
+    color: #FFF;
+    text-align: center;
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+    font-size: 60px;
+    letter-spacing: 6px;
+}
+
+#title span {
+    background: -webkit-linear-gradient(white, #38495a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.search-bar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0%;
+    padding-top: 10px;
+    padding-left: 30%;
+
+}
+
+.text-input {
+    height: 38px;
+    background-color: rgba(22, 32, 43, 0.3);
+    border: 2px solid rgb(30, 46, 65);
+    box-shadow: 0 0 10px 2px rgb(27, 39, 53) inset;
+}
+
+.search-bar #logo {
+    float: left;
+    height: 38px;
+    width: 38px;
+    margin-right: 10px;
+}
+
+#padding {
+    height: 1000px;
+}
+
+@keyframes starsanim{
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 -5000px;
+    }
+}
