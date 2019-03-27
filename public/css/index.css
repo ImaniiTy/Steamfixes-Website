@@ -166,8 +166,8 @@
 .grid .grid-item, .grid .placeholder {
     height: 230px;
     max-width: 450px;
-    min-width: 340px;
-    flex: 1 1 341px;
+    min-width: 350px;
+    flex: 1 1 351px;
     margin: 10px;
 }
 
