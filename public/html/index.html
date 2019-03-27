@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/index.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/stars.css">
@@ -21,9 +22,23 @@
     </div>
 
     <div class="search-bar">
-        <img id="logo" src="../img/logo.png" alt="placeholder">
         <form action="" method="post">
-            <input class="text-input" type="text" name="search" placeholder="Search Game" size="40">
+            <input class="text-input" type="text" name="search" placeholder="Search Game" size="40" autocomplete="off">
+            <select name="search_cat" class="dropdown">
+                <option value="all">All</option>
+                <option value="action">Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="casual">Casual</option>
+                <option value="indie">Indie</option>
+                <option value="multiplayer">Multiplayer</option>
+                <option value="mmo">MMO</option>
+                <option value="racing">Racing</option>
+                <option value="rpg">RPG</option>
+                <option value="simulator">Simulator</option>
+                <option value="sport">Sport</option>
+                <option value="virtualreality">Virtual Reality</option>
+            </select>
+            <button type="submit" class="primary-button"><i class="fas fa-chevron-right"></i></button>
         </form>
     </div>
 

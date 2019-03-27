@@ -3,7 +3,7 @@
     top : 5%;
     left: 0;
     right: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #FFF;
     text-align: center;
     font-family: 'lato', sans-serif;
@@ -22,17 +22,30 @@
 .search-bar {
     position: -webkit-sticky;
     position: sticky;
-    top: 0%;
-    padding-top: 10px;
-    padding-left: 30%;
-
+    top: 0;
+    padding-top: 20px;
+    text-align: center;
 }
 
-.text-input {
+.text-input, .dropdown {
     height: 38px;
+    color: whitesmoke;
     background-color: rgba(22, 32, 43, 0.3);
     border: 2px solid rgb(30, 46, 65);
     box-shadow: 0 0 10px 2px rgb(27, 39, 53) inset;
+}
+
+.dropdown option {
+    color: whitesmoke;
+    background-color: #0e1118;
+}
+
+.primary-button {
+    height: 38px;
+    color : whitesmoke;
+    background-color: #1d3a57;
+    border: 2px solid rgb(30, 46, 65);
+    /* box-shadow: 0 0 10px 2px rgb(27, 39, 53) inset; */
 }
 
 .search-bar #logo {
