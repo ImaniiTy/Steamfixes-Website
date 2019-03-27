@@ -27,9 +27,16 @@
     text-align: center;
 }
 
+.rounded {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
 .text-input, .dropdown {
     height: 38px;
     color: whitesmoke;
+    padding-left: 5px;
     background-color: rgba(22, 32, 43, 0.3);
     border: 2px solid rgb(30, 46, 65);
     box-shadow: 0 0 10px 2px rgb(27, 39, 53) inset;
@@ -46,6 +53,21 @@
     background-color: #1d3a57;
     border: 2px solid rgb(30, 46, 65);
     /* box-shadow: 0 0 10px 2px rgb(27, 39, 53) inset; */
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 100%;
+    margin: 50px 20px;
+    padding: 0 6%;
+}
+
+.grid-item {
+    height: 230px;
+    max-width: 450px;
+    min-width: 420px;
+    flex: 1 1 300px;
+    margin: 10px;
 }
 
 .search-bar #logo {
