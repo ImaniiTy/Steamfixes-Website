@@ -11,6 +11,9 @@
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.16.4",
-    "html": "^1.0.0"
+    "express-handlebars": "^3.0.2",
+    "handlebars": "^4.1.1",
+    "html": "^1.0.0",
+    "jsdom": "^14.0.0"
   }
 }

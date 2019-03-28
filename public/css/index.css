@@ -4,10 +4,10 @@
  */
 #title {
     position: relative;
-    top : 5%;
     left: 0;
     right: 0;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
     color: #FFF;
     text-align: center;
     font-family: 'lato', sans-serif;
@@ -106,6 +106,10 @@ div#info {
     color: #767676;
 }
 
+.info .info-data>span>i {
+    margin: 0 3px;
+}
+
 .info h2.info-title {
     margin-top: 135px;
     margin-bottom: 10px;
@@ -131,11 +135,11 @@ div#info {
     -moz-border-radius: 4px;
     border-radius: 4px;
 }
-.info .info-category>span.category.singleplayer {
+.info .info-category>span.category.Singleplayer {
     background-color: rgba(159, 21, 21, 0.8);
     color: whitesmoke;
 }
-.info .info-category>span.category.multiplayer {
+.info .info-category>span.category.Multiplayer {
     background-color: rgba(21, 115, 159, 0.8);
     color: whitesmoke;
 }
