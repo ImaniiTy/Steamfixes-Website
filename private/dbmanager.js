@@ -24,6 +24,12 @@ class DBManager {
     getCollection(collection) {
         return this.db.collection(collection).find({}).toArray()
     }
+
+    searchOnCollection(collection, query) {
+        return this.db.collection(collection).find({ 
+            title: {$regex: `.*${query}.*`, $options: 'i'}
+        }).toArray()
+    }
 }
 
 const dbManager = new DBManager("mongodb://191.186.171.237:27017","website");

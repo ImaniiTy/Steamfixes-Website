@@ -9,9 +9,9 @@
     <span>Yena</span>
 </div>
 <div class="search-bar rounded">
-    <form method="post">
-        <input class="text-input rounded" type="text" name="search" placeholder="Search Game" size="40" autocomplete="off">
-        <select name="search_cat" class="dropdown">
+    <form id="search_form" name="search_game" method="post">
+        <input class="text-input rounded" type="text" name="title" placeholder="Search Game" size="40" autocomplete="off">
+        <select name="category" class="dropdown rounded">
             <option value="all">All</option>
             <option value="action">Action</option>
             <option value="adventure">Adventure</option>
@@ -35,8 +35,9 @@
     <div class="grid-item game-card">
         <div class="info game-card">
             <div class="game-thumb game-card">
+                <img id="thumbnail-img" alt="Nome_Do_Post" src="{{this.img}}" width="100%" height="100%">
                 <a href="Nome_Do_Post">
-                    <img id="thumbnail-img" alt="Nome_Do_Post" src="{{this.img}}" width="100%" height="100%">
+                    <div class="gradient game-card"></div>
                 </a>
             </div>
             <div class="info-data">
@@ -67,8 +68,9 @@
 
 <!-- Footer -->
 <footer class="container">
-    <div class="to_top" title="Scroll To Top" style="display: block;"><i class="fa fa-angle-up"></i></div>
+    <div id="to_top" class="to_top" title="Scroll To Top" style="display: block;"><i class="fa fa-angle-up"></i></div>
 </footer>
 <!-- //Footer -->
 
-<script src="../scripts/stars.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="../scripts/utils.js"></script>

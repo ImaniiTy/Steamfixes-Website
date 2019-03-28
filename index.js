@@ -14,6 +14,8 @@ app.use(compression());
 
 app.use(express.static(paths.root));
 
+app.use(express.urlencoded());
+
 app.get("/", function (req, res) {
     db.getCollection("games")
         .then(docs => {
@@ -23,6 +25,13 @@ app.get("/", function (req, res) {
             res.render("index",{games: []});
         });
 });
+
+app.post("/api/search", function (req, res) {
+    console.log(req.body);
+    db.searchOnCollection("games", req.body.title)
+        .then(result => res.json(result))
+        .catch(err => res.json({}))
+})
 
 app.listen(3000, function () {
     db.connect();
