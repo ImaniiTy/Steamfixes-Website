@@ -57,6 +57,7 @@
     color : whitesmoke;
     background-color: #1d3a57;
     border: 2px solid rgb(30, 46, 65);
+    cursor: pointer;
     /* box-shadow: 0 0 10px 2px rgb(27, 39, 53) inset; */
 }
 .search-bar #logo {
@@ -112,16 +113,22 @@ div#info {
 .info h2.info-title {
     margin-top: 135px;
     margin-bottom: 10px;
-    padding: 0px 3px;
+    padding: 0px 6px;
     font-size: 1.3rem;
     font-weight: 500;
     text-overflow: ellipsis;
     overflow: hidden;
     color: whitesmoke;
+    transition: margin-top 400ms;  
+}
+
+.info:hover h2.info-title {
+    margin-top: 127px;
 }
 
 .info .info-category {
     float: left;
+    padding: 0px 4px;
 }
 
 .info .info-category span.category {
@@ -146,9 +153,30 @@ div#info {
 .info .gradient {
     top: 0;
     position: absolute;
-    background: linear-gradient(to bottom,rgba(0, 0, 0, 0) 0,rgba(0, 0, 0, 0.17) 40%,rgba(0, 0, 0, 0.59) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0) 0,rgba(0, 0, 0, 0.17) 40%,rgba(0, 0, 0, 0.623) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
+.info:hover .gradient{
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0) 0,rgba(0, 0, 0, 0.425) 40%,rgba(0, 0, 0, 0.623) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+@keyframes cardHoverIn {
+    from {
+        margin-top: 135px;
+    }
+    to {
+        margin-top: 125px;
+    }
+}
+
+@keyframes cardHoverOut {
+    from {
+        margin-top: 125px;
+    }
+    to {
+        margin-top: 135px;
+    }
+}
 
 /* 
  * Button For Top

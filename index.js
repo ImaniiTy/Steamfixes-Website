@@ -29,8 +29,8 @@ app.get("/", function (req, res) {
 app.post("/api/search", function (req, res) {
     console.log(req.body);
     db.searchOnCollection("games", req.body.title)
-        .then(result => res.json(result))
-        .catch(err => res.json({}))
+        .then(result => res.json({games: result}))
+        .catch(err => res.json({games: []}))
 })
 
 app.listen(3000, function () {

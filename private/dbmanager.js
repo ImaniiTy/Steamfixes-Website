@@ -26,9 +26,22 @@ class DBManager {
     }
 
     searchOnCollection(collection, query) {
-        return this.db.collection(collection).find({ 
-            title: {$regex: `.*${query}.*`, $options: 'i'}
-        }).toArray()
+        return this.db.collection(collection).aggregate([
+            {$match: {
+                title: {$regex: `.*${query}.*`, $options: 'i'}
+            }},
+            {$addFields: {
+                dateOrder: {
+                    $dateFromString: {
+                        dateString: "$date",
+                        format: "%m/%d/%Y"
+                    }
+                }
+            }},
+            {$sort: {
+                dateOrder: -1
+            }}
+        ]).toArray()
     }
 }
 
