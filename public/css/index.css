@@ -60,6 +60,10 @@
     cursor: pointer;
     /* box-shadow: 0 0 10px 2px rgb(27, 39, 53) inset; */
 }
+.primary-button:hover {
+    background-color: #15293d;
+}
+
 .search-bar #logo {
     float: left;
     height: 38px;
