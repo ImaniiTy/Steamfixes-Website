@@ -8,7 +8,7 @@
 <div id='title'>
     <span>Yena</span>
 </div>
-<div class="search-bar rounded">
+<div id="search_bar"  class="search-bar rounded">
     <form id="search_form" name="search_game" method="post">
         <input class="text-input rounded" type="text" name="title" placeholder="Search Game" size="40" autocomplete="off">
         <select name="category" class="dropdown rounded">
@@ -31,38 +31,12 @@
 <!-- //Header -->
 
 <div class="grid" id="games-grid">
-    {{#each games}}
-    <div class="grid-item game-card">
-        <div class="info game-card">
-            <div class="game-thumb game-card">
-                <img id="thumbnail-img" alt="Nome_Do_Post" src="{{this.img}}" width="100%" height="100%">
-                <a href="Nome_Do_Post">
-                    <div class="gradient game-card"></div>
-                </a>
-            </div>
-            <div class="info-data">
-                <span id="data"><i class="far fa-calendar-alt"></i>{{this.date}}</span>
-            </div>
-            <a href="Nome_Do_Post">
-                <h2 id="name" class="info-title">{{this.title}}</h2>
-            </a>
-            <div id="categories" class="info-category">
-                {{#each this.categories}}
-                <span class="category {{this}}">{{this}}</span>
-                {{/each}}
-            </div>
-        </div>
-    </div>
-    {{/each}}
-    <div class="placeholder game-card">
-        
-    </div>
-    <div class="placeholder game-card">
-
-    </div>
+    
 </div>
 
-<div id="padding"></div>
+<div id="pagination" class="pagination">
+
+</div>
 
 <!-- //OLD -->
 

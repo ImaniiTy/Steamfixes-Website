@@ -1,0 +1,15 @@
+{{#if previous}}
+    <button class="page_button" value="{{previous}}" onclick="pageHandler(this)"><</button>
+{{else}}
+    <button class="page_button" value="{{previous}}" onclick="pageHandler(this)" disabled><</button>
+{{/if}}
+
+{{#each pages}}
+    <button class="page_button" value="{{this.value}}" onclick="pageHandler(this)">{{this.value}}</button>
+{{/each}}
+
+{{#if next}}
+    <button class="page_button" value="{{next}}" onclick="pageHandler(this)">></button>
+{{else}}
+    <button class="page_button" value="{{next}}" onclick="pageHandler(this)" disabled>></button>
+{{/if}}
