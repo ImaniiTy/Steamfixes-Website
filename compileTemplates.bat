@@ -1,0 +1,1 @@
+node ./node_modules\handlebars\bin/handlebars ./views\templates -f ./public\scripts\templates/templates.js

@@ -1,15 +1,30 @@
+<script id="details-tpl" type="script/template">
+    <div class="details-bg">
+        <div class="details">
+            <div id="padding"></div>
+        </div>
+    </div>
+    
+</script>
+
 <!-- BackGround -->
 <div id='stars'></div>
-<div id='stars2'></div>
-<div id='stars3'></div>
+
 <!-- //BackGround -->
+
+<div id="details_wrapper">
+    <div id="details">
+        <h2 class="title">Game_Name</h2>
+        <button class="close_btn">X</button>
+    </div>
+</div>
 
 <!-- Header nav -->
 <div id='title'>
     <span>Yena</span>
 </div>
 <div id="search_bar"  class="search-bar rounded">
-    <form id="search_form" name="search_game" method="post">
+    <form id="search_form" name="search_game rounded" method="post">
         <input class="text-input rounded" type="text" name="title" placeholder="Search Game" size="40" autocomplete="off">
         <select name="category" class="dropdown rounded">
             <option value="all">All</option>
@@ -37,8 +52,6 @@
 <div id="pagination" class="pagination">
 
 </div>
-
-<!-- //OLD -->
 
 <!-- Footer -->
 <footer class="container">

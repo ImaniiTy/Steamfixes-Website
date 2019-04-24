@@ -6,7 +6,7 @@ class DBManager {
         this.url = url;
         this.dbName = dbName;
 
-        this.client = new mongo.MongoClient(url);
+        this.client = new mongo.MongoClient(url, {keepAlive: true});
         this.db;
     }
 

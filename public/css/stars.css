@@ -9,6 +9,30 @@
     z-index: -1;
 }
 
+#stars::before {
+    content: '';
+    background: url("../img/stars2.png") repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    animation: starsanim 250s linear infinite;
+    z-index: -1;
+}
+
+#stars::after{
+    content: '';
+    background: url("../img/stars3.png") repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    animation: starsanim 300s linear infinite;
+    z-index: -1;
+}
+/*
 #stars2 {
     background: url("../img/stars2.png") repeat;
     position: fixed;
@@ -30,7 +54,7 @@
     animation: starsanim 300s linear infinite;
     z-index: -1;
 }
-
+*/
 @keyframes starsanim{
     from {
         background-position: 0 0;

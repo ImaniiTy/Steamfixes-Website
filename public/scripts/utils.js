@@ -7,7 +7,37 @@ function animateToTop() {
     });
 }
 
-$("#to_top").click(animateToTop);
+function toggleDetails(sender) {
+    const details = $("#details_wrapper");
+    
+    if(sender){
+        $("#details .title").html(sender.data("title"));
+    }
+
+    const detailsDisplay = details.css("display");
+    details.css("display", detailsDisplay == "block" ? "none" : "block");
+}
+
+function onLoad() {
+    sessionStorage.setItem("query", "title=&category=all");
+    sessionStorage.setItem("page",1);
+    search();
+}
+
+function onScroll() {
+    var rect = document.getElementById("search_bar").getBoundingClientRect();
+    if(rect.top === 0) {
+        $("#search_form ").css("background-color", "rgba(19, 26, 33, 0.9)");
+        $("#search_bar .text-input").css("border-color", "rgba(48, 70, 96, 0.9)");
+        $("#search_bar .dropdown").css("border-color", "rgba(48, 70, 96, 0.9)");
+        $("#search_bar .primary-button").css("border-color", "rgba(48, 70, 96, 0.9)");
+    } else {
+        $("#search_form ").css("background-color", "transparent");
+        $("#search_bar .text-input").css("border-color", "rgb(30, 46, 65)");
+        $("#search_bar .dropdown").css("border-color", "rgb(30, 46, 65)");
+        $("#search_bar .primary-button").css("border-color", "rgb(30, 46, 65)");
+    }
+}
 
 function pageHandler(sender) {
     sessionStorage.setItem("page",sender.value);
@@ -47,11 +77,25 @@ function search() {
         updateGamesGrid(data);
         updatePagination(18);
         animateToTop();
+
+        $(".post-link").click(function (event) {
+            toggleDetails($(this));
+        });
     })
     .fail(function (err) {
         console.error(err.stack);
     });
 }
+
+$("#details_wrapper").click(function (event) {
+    toggleDetails();
+}).children().click(function (event) {
+    return false;
+});
+
+$("#details .close_btn").click(function (event) {
+    toggleDetails();
+});
 
 $("#search_form").submit(function (event) {
     event.preventDefault();
@@ -60,23 +104,8 @@ $("#search_form").submit(function (event) {
     search();
 });
 
-function onLoad() {
-    sessionStorage.setItem("query", "title=&category=all");
-    sessionStorage.setItem("page",1);
-    search();
-}
+$("#to_top").click(animateToTop);
 
 $(onLoad);
 
 window.onscroll = onScroll;
-
-function onScroll() {
-    var rect = document.getElementById("search_bar").getBoundingClientRect();
-    if(rect.top === 0) {
-        $("#search_bar .text-input").css("background-color", "rgba(22, 32, 43, 0.9)");
-        $("#search_bar .dropdown").css("background-color", "rgba(22, 32, 43, 0.9)");
-    } else {
-        $("#search_bar .text-input").css("background-color", "rgba(22, 32, 43, 0.3)");
-        $("#search_bar .dropdown").css("background-color", "rgba(22, 32, 43, 0.3)");
-    }
-}

@@ -27,10 +27,21 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    padding: 20px 0px;
     text-align: center;
-    z-index: 10;
+    
+    z-index: 9;
 }
+
+
+.search-bar #search_form {
+    width: 488px;
+    margin: 0 auto;
+    padding: 10px 0;
+    transition: background-color 400ms;
+    border-radius: 8px;
+}
+
+
 
 .rounded {
     -webkit-border-radius: 3px;
@@ -46,6 +57,26 @@
     border: 2px solid rgb(30, 46, 65);
     box-shadow: 0 0 10px 2px rgb(27, 39, 53) inset;
     transition: background-color 400ms;
+}
+
+@media screen and (max-device-width: 460px) {
+    .text-input {
+        width: 200px;
+    }
+
+    .search-bar #search_form {
+        width: 368px;
+    }
+}
+
+@media screen and (max-device-width: 400px) {
+    .text-input {
+        width: 170px;
+    }
+
+    .search-bar #search_form {
+        width: 348px;
+    }
 }
 
 .dropdown option {
@@ -83,6 +114,10 @@
     width: 410px;
 }
 
+.game-card a {
+    cursor: pointer;
+}
+
 div#info {
     position: absolute;
     width: 100%;
@@ -92,7 +127,8 @@ div#info {
 }
 
 .info {
-    position: absolute;
+    flex-grow: 0;
+    margin: 10px 15px;
     z-index: 5;
 }
 
@@ -164,6 +200,44 @@ div#info {
     background: linear-gradient(to bottom,rgba(0, 0, 0, 0) 0,rgba(0, 0, 0, 0.425) 40%,rgba(0, 0, 0, 0.623) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
+@media screen and (max-device-width: 460px) {
+    .game-card {
+        height: 180px;
+        width: 340px;
+    }
+
+    .info .info-data {
+        width: 30%;
+    }
+
+    .info h2.info-title {
+        margin-top : 95px;
+    }
+
+    .info:hover h2.info-title {
+        margin-top: 87px;
+    }
+}
+
+@media screen and (max-device-width: 400px) {
+    .game-card {
+        height: 160px;
+        width: 300px;
+    }
+
+    .info .info-data {
+        width: 30%;
+    }
+
+    .info h2.info-title {
+        margin-top : 75px;
+    }
+
+    .info:hover h2.info-title {
+        margin-top: 67px;
+    }
+}
+
 /*
  * Pagination
  */
@@ -182,7 +256,7 @@ div#info {
  * 
  */
 .to_top {
-    z-index: 10;
+    z-index: 9;
     cursor: pointer;
     color: whitesmoke;
     text-align: center;
@@ -212,12 +286,55 @@ div#info {
     margin: 10px auto;
 }
 
-.grid .grid-item, .grid .placeholder {
+.grid .placeholder {
+    height: 1px;
+    margin: 0 15px;
     flex-grow: 0;
     margin: 10px 15px;
 }
 
-.grid .placeholder {
-    height: 1px;
-    margin: 0 15px;
+/* 
+ * Details
+ */
+
+#details {
+    text-align: center;
+    position: sticky;
+    top: 20px;
+    width: 95%;
+    height: 95vh;
+    margin: 20px auto;
+    z-index: 11;
+    overflow: auto;
+    background: rgb(22, 22, 22);
+}
+
+#details .title{
+    font-family: 'lato', sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+#details .close_btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: solid 0px;
+    outline:none;
+    font-family: sans-serif;
+    color: whitesmoke;
+    font-size: 20px;
+    background: transparent;
+}
+
+#details_wrapper {
+    display: none;
+    position: absolute;
+    top:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.9);
 }
